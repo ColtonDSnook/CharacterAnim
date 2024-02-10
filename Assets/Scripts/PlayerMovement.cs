@@ -12,6 +12,11 @@ public class PlayerMovement : BaseMovement
     public GameObject leftFoot;
     public GameObject rightFoot;
 
+    private void Start()
+    {
+        Cursor.visible = false;
+    }
+
     private void Update()
     {
         tempMovement = Input.GetAxis("Horizontal") * Camera.main.transform.right + Input.GetAxis("Vertical") * Camera.main.transform.forward;
